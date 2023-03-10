@@ -7,7 +7,7 @@ function NavbarCaller() {
         <>
         <Navbar bg='dark' variant='dark'>
             <Container>
-              <Navbar.Brand>bin2Dec</Navbar.Brand>
+              <Navbar.Brand>Converter Tool</Navbar.Brand>
             </Container>
         </Navbar>
         </>

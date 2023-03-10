@@ -1,6 +1,7 @@
-import {Container, Form, Button, Row} from 'react-bootstrap/';
+import {Container, Row, Tab, Tabs,Form, Button} from 'react-bootstrap/';
+//import Bin2Dec from './Bin2Dec';
 
-function App() {
+function Bin2Dec() {
   return (
     <Container>
       <Row>
@@ -17,8 +18,9 @@ function App() {
           <Button size="lg" variant='dark'>Convert</Button>
         </div>
       </Form>
+      
     </Container>
   );
 }
 
-export default App;
+export default Bin2Dec;
