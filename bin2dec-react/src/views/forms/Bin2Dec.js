@@ -9,6 +9,7 @@ function Bin2Dec() {
   }
   
   const [binaryValue, setBinaryValue] = useState("");
+  // eslint-disable-next-line
   const [decimalValue, setDecimalValue] = useState("");
   const [showModal, handleShow] = useState(false);
   const [modalTitle, setModalTitle] = useState("");

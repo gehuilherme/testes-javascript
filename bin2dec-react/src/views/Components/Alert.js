@@ -1,13 +1,16 @@
 import Alert from 'react-bootstrap/Alert';
 
-function AlertBox() {
+function CallAlertBox(props) {
+
+  const key = "warning"; 
+  const type = "warning";
+  const notify = "This function is under development.";
+
   return (
     <>
-        <Alert key='warning' variant='warning'>
-            <center>These tool are under development!</center>
-        </Alert>
+        <Alert key={key} variant={type}>{notify}</Alert>
     </>
   );
 }
 
-export default AlertBox;
+export default CallAlertBox;

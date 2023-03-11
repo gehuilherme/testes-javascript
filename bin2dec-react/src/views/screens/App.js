@@ -13,7 +13,7 @@ function App() {
 
 
       <Tabs
-      defaultActiveKey="bin2dec"
+      defaultActiveKey="dec2bin"
       id="uncontrolled-tab-example"
       className="mb-3"
       fill
