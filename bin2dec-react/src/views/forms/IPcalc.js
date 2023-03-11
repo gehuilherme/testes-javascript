@@ -1,9 +1,9 @@
-import {Container, Form, Button} from 'react-bootstrap';
+import {Container, Form, Button, Row, Col} from 'react-bootstrap';
 import React, { useState } from "react";
 import AlertBox from '../Components/Alert';
 import CallModal from '../Components/Modal';
 
-function Dec2Bin() {
+function IPCalc() {
 
   const [showModal, handleShow] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
@@ -26,8 +26,16 @@ function Dec2Bin() {
       <AlertBox />
       <Form>
         <Form.Group className='mb-3'>
-          <Form.Label><b>Write a decimal number:</b></Form.Label>
-          <Form.Control size="lg" type='text' id='inputDecimalNumber'/>
+            <Row>
+                <Col sm={9}>
+                    <Form.Label><b>Address (Host or Network):</b></Form.Label>
+                    <Form.Control size="lg" type='text' id='inputIP'/>
+                </Col>
+                <Col sm={3}>
+                    <Form.Label><b>Netmask (i.e. 24):</b></Form.Label>
+                    <Form.Control size="lg" type='text' id='inputNetmask'/>
+                </Col>
+            </Row>
         </Form.Group>
         <div className="d-grid gap-2">
           <Button size="lg" variant='dark' onClick={handleButtonClick}>Convert</Button>
@@ -41,4 +49,4 @@ function Dec2Bin() {
   );
 }
 
-export default Dec2Bin;
+export default IPCalc;

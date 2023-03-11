@@ -1,6 +1,6 @@
 import {Container, Form, Button} from 'react-bootstrap';
 import React, { useState } from "react";
-import ModalCalc from '../Components/Modal';
+import CallModal from '../Components/Modal';
 
 function Bin2Dec() {
 
@@ -8,7 +8,6 @@ function Bin2Dec() {
     return parseInt(bin, 2);
   }
   
-
   const [binaryValue, setBinaryValue] = useState("");
   const [decimalValue, setDecimalValue] = useState("");
   const [showModal, handleShow] = useState(false);
@@ -49,7 +48,7 @@ function Bin2Dec() {
           <Button size="lg" variant='dark' onClick={handleButtonClick}>Convert</Button>
         </div>
         {showModal && (
-          <ModalCalc onClose={handleModalClose} modaltitle={modalTitle} modalmessage={modalMessage} modalbuttontext={modalButtonText} />
+          <CallModal onClose={handleModalClose} modaltitle={modalTitle} modalmessage={modalMessage} modalbuttontext={modalButtonText} />
         )}
       </Form>
 

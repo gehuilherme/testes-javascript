@@ -1,6 +1,7 @@
 import {Container, Row, Tab, Tabs} from 'react-bootstrap';
 import Bin2Dec from '../forms/Bin2Dec';
 import Dec2Bin from '../forms/Dec2Bin';
+import IPCalc from '../forms/IPcalc';
 
 
 function App() {
@@ -26,6 +27,12 @@ function App() {
         <Tab eventKey="dec2bin" title="Dec2Bin">
           <Container>
             <Dec2Bin />
+          </Container>
+        </Tab>
+
+        <Tab eventKey="ipcalc" title="IPCalc">
+          <Container>
+            <IPCalc />
           </Container>
         </Tab>
         
