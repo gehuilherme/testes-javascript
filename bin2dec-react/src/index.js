@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './views/App';
-import NavbarCaller from './views/Navbar';
+import App from './views/screens/App';
+import NavbarCaller from './views/screens/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
