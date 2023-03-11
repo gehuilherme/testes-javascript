@@ -7,9 +7,7 @@ function App() {
   return (
     <Container>
       <Row>
-        <center>
-          <p></p>
-        </center>
+        &nbsp;
       </Row>
 
 

@@ -1,6 +1,6 @@
 import {Container, Form, Button} from 'react-bootstrap';
 import React, { useState } from "react";
-import ModalCalc from '../Components/ModalCalc';
+import ModalCalc from '../Components/Modal';
 
 function Bin2Dec() {
 
@@ -12,16 +12,20 @@ function Bin2Dec() {
   const [binaryValue, setBinaryValue] = useState("");
   const [decimalValue, setDecimalValue] = useState("");
   const [showModal, handleShow] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
   const [modalMessage, setModalMessage] = useState("");
+  const [modalButtonText, setModalButtonText] = useState("");
 
   function handleBinaryInputChange(event) {
     setBinaryValue(event.target.value);
   }
 
-  function handleConvertButtonClick() {
+  function handleButtonClick() {
     const decimal = convert(binaryValue);
     setDecimalValue(decimal);
-    setModalMessage(`The decimal value of <b>${binaryValue}</b> is <b>${decimal}</b>.`);
+    setModalTitle(`Result of conversion`);
+    setModalMessage(`The decimal value is <b>${decimal}</b>.`);
+    setModalButtonText(`Close`);
     handleShow(true);
   }
 
@@ -42,10 +46,10 @@ function Bin2Dec() {
           />
         </Form.Group>
         <div className="d-grid gap-2">
-          <Button size="lg" variant='dark' onClick={handleConvertButtonClick}>Convert</Button>
+          <Button size="lg" variant='dark' onClick={handleButtonClick}>Convert</Button>
         </div>
         {showModal && (
-          <ModalCalc onClose={handleModalClose} message={modalMessage} />
+          <ModalCalc onClose={handleModalClose} modaltitle={modalTitle} modalmessage={modalMessage} modalbuttontext={modalButtonText} />
         )}
       </Form>
 
