@@ -6,7 +6,7 @@ function ModalCalc(props) {
   const handleClose = () => props.onClose();
 
   return (
-    <Modal show={true} onHide={handleClose} size="sm" centered>
+    <Modal show={true} onHide={handleClose} centered>
       <Modal.Header closeButton>
         <Modal.Title>Conversion result</Modal.Title>
       </Modal.Header>
